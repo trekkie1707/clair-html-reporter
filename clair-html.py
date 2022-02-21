@@ -51,7 +51,7 @@ def parseArguments():
             success = False
         index += 1
     if parsed.readStdin:
-        parsed.stdinValue = sys.stdin
+        parsed.stdinValue = sys.stdin.read()
     if not (parsed.readStdin or parsed.fileName):
         success = False
     return success, parsed
