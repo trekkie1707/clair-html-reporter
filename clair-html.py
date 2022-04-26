@@ -2,6 +2,7 @@ import sys
 import json
 import urllib.request
 import urllib.parse
+import time
 
 
 class standardArgs:
@@ -125,6 +126,7 @@ def generateHTMLReport(args, json):
                 "<td>" + json["vulnerabilities"][vuln]["description"] + "</td>"
             )
             outFile.write("</tr>")
+            time.sleep(3)
     outFile.write("</table>")
     outFile.write("</html>")
     outFile.close()
